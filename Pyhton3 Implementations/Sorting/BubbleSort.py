@@ -1,7 +1,14 @@
 from typing import List
 
 def bubble_sort(nums : List[int]) -> List[int]:
+    """
+    Does a Bubble sort on the list and returns the sorted List 
     
+    input:
+        nums -> List of numbers of type integer
+    Output:
+        Sorted List -> The sorted List
+    """
     rev = 1
     length = len(nums)
     for i in range(length):
@@ -16,5 +23,4 @@ def bubble_sort(nums : List[int]) -> List[int]:
     return nums
 
 
-print(bubble_sort([4,3,2,1]))
             
