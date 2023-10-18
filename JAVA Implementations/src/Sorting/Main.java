@@ -8,7 +8,8 @@ public class Main {
         System.out.println(Arrays.toString(array));
 //        bubbleSort(array);
 //        selectionSort(array);
-        insertionSort(array);
+//        insertionSort(array);
+        cyclicSort(array);
         System.out.println(Arrays.toString(array));
     }
     public static void selectionSort(int[] array){
@@ -30,6 +31,10 @@ public class Main {
         }
     }
     public static void cyclicSort(int[] array){
+        for(int i=0;i<array.length;i++){
+            int correctIndex = array[i] - 1;
+            swap(array,i,correctIndex);
+        }
 
     }
     public static void bubbleSort(int[] array){
@@ -37,10 +42,8 @@ public class Main {
         for(int i=0;i<array.length;i++){
             flag = false;
             for(int j=1;j<array.length - i;j++){
-                if(array[j] < array[j-1]){
-                   int temp = array[j-1];
-                   array[j-1]=array[j];
-                   array[j] = temp;
+                if(array[j-1] > array[j]){
+                    swap(array,j,j-1);
                    flag = true;
                 }
             }
