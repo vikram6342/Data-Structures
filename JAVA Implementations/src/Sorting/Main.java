@@ -30,12 +30,12 @@ public class Main {
             }
         }
     }
+
     public static void cyclicSort(int[] array){
         for(int i=0;i<array.length;i++){
             int correctIndex = array[i] - 1;
             swap(array,i,correctIndex);
         }
-
     }
     public static void bubbleSort(int[] array){
         boolean flag;
