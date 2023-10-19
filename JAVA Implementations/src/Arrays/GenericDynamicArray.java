@@ -2,16 +2,15 @@ package Arrays;
 
 import java.util.Arrays;
 
-public class DynamicArray {
+public class GenericDynamicArray<T> {
     static int capacity = 10;
     static int size = 0;
-    int[] dynamicArray;
-    public DynamicArray(){
-        dynamicArray = new int[capacity];
+    T[] dynamicArray;
+    public GenericDynamicArray(){
+        dynamicArray = (T[]) new Object[capacity];
     }
-
-    public void add(int element){
-        if(!isFull()){
+    public void add(T element){
+        if(isFull()){
             resize();
         }
         dynamicArray[size++] = element;
@@ -20,21 +19,21 @@ public class DynamicArray {
         return size == capacity;
     }
     public void resize(){
-        int[] temp = new int[capacity*2];
+        T[] temp = (T[])new Object[capacity*2];
         for(int i =0;i<size;i++){
             temp[i] = dynamicArray[i];
         }
         dynamicArray = temp;
     }
-    public int get(int index){
+    public T get(int index){
         return dynamicArray[index];
     }
-    public int remove(){
-        int removedElement = dynamicArray[size()-1];
+    public T remove(){
+        T removedElement = dynamicArray[size()-1];
         size--;
         return removedElement;
     }
-    public void set(int index,int element){
+    public void set(int index,T element){
         dynamicArray[index] = element;
     }
     public int size(){

@@ -5,7 +5,7 @@ public class DLL{
      private Node head;
      private Node tail;
      //Insert a node in first
-     public void insertfirst(int val){
+     public void insertFirst(int val){
          Node node=new Node(val);
          node.next=head;
          node.prev=null;
@@ -35,7 +35,7 @@ public class DLL{
 
     }
 // Insert at last
-    public void insertlast(int val){
+    public void insertLast(int val){
          Node node=new Node(val);
          tail=head;
 
