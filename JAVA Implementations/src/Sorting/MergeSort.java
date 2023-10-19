@@ -12,6 +12,7 @@ public class MergeSort {
             return array;
         }
         int mid = array.length/2;
+        //divide the array till size of array becomes 1
         int[] left = mergeSort(Arrays.copyOfRange(array,0,mid));
         int[] right = mergeSort(Arrays.copyOfRange(array,mid,array.length));
 
@@ -23,6 +24,8 @@ public class MergeSort {
         int j = 0;
         int k = 0;
 
+        //compare the elements from both the array left and right and add the smallest element in combined array
+        //till either of the array completes
         while(i<left.length && j<right.length){
             if(left[i] < right[j]){
                 combined[k++] = left[i++];
@@ -30,9 +33,12 @@ public class MergeSort {
                 combined[k++] = right[j++];
             }
         }
+
+        //add the remaining elements of left array to combined array as there is no elements remaining in right array to compare
         while (i < left.length){
             combined[k++] = left[i++];
         }
+        //add the remaining elements of right array to combined array as there is no elements remaining in left array to compare
         while (j < right.length){
             combined[k++] = right[j++];
         }
