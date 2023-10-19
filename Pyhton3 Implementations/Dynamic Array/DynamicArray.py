@@ -18,6 +18,9 @@ class Dynamic_Array:
         
         self.array[ind] = val
         
+    def __len__(self):
+        return self.pos
+    
         
     def __repr__(self):
         string = "["
@@ -28,7 +31,8 @@ class Dynamic_Array:
         string += "]"
         return string
     
-                
+    
+    
     def isValid(self, ind) -> bool:    
         return 0 <= ind < self.pos
     
@@ -52,10 +56,4 @@ class Dynamic_Array:
     
 A = Dynamic_Array()
 
-A.add_at_end(1)
-A.add_at_end(2)
-A.add_at_end(32)
-A.add_at_end(43)
-A.add_at_end(12)
-A[3] = 343
-print(A)
+print(len(A))
