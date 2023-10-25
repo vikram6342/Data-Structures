@@ -19,7 +19,8 @@ public class GenericDynamicArray<T> {
         return size == capacity;
     }
     public void resize(){
-        T[] temp = (T[])new Object[capacity*2];
+        capacity = capacity *2;
+        T[] temp = (T[])new Object[capacity];
         for(int i =0;i<size;i++){
             temp[i] = dynamicArray[i];
         }

@@ -31,6 +31,7 @@ public class Main {
         }
     }
 
+    //cyclic sort can be used only when the array contains all the elements from 1 to n
     public static void cyclicSort(int[] array){
         for(int i=0;i<array.length;i++){
             int correctIndex = array[i] - 1;
