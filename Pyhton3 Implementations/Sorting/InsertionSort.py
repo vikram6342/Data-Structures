@@ -1,23 +1,27 @@
-from typing import List
+# Python program for implementation of Insertion Sort
 
-def bubble_sort(nums : List[int]) -> List[int]:
-    """
-    Does a Insertion sort on the list and returns the sorted List 
-    
-    input:
-        nums -> List of numbers of type integer
-    Output:
-        Sorted List -> The sorted List
-    """
-    length = len(nums)
-    for i in range(1, length):
-        target = nums[i]
-        j = i - 1
-        while j >= 0 and nums[j] > target:
-            nums[j + 1] = nums[j]
-            j -= 1
-        nums[j + 1] = target
-    
-    return nums
+# Function to do insertion sort
+def insertionSort(arr):
 
-            
+	# Traverse through 1 to len(arr)
+	for i in range(1, len(arr)):
+
+		key = arr[i]
+
+		# Move elements of arr[0..i-1], that are
+		# greater than key, to one position ahead
+		# of their current position
+		j = i-1
+		while j >= 0 and key < arr[j] :
+				arr[j + 1] = arr[j]
+				j -= 1
+		arr[j + 1] = key
+
+
+# Driver code to test above
+arr = [12, 11, 13, 5, 6]
+insertionSort(arr)
+for i in range(len(arr)):
+	print ("% d" % arr[i])
+
+# This code is contributed by Mohit Kumra
