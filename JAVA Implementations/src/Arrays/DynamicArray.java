@@ -11,7 +11,7 @@ public class DynamicArray {
     }
 
     public void add(int element){
-        if(!isFull()){
+        if(isFull()){
             resize();
         }
         dynamicArray[size++] = element;
@@ -20,7 +20,8 @@ public class DynamicArray {
         return size == capacity;
     }
     public void resize(){
-        int[] temp = new int[capacity*2];
+        capacity = capacity * 2;
+        int[] temp = new int[capacity];
         for(int i =0;i<size;i++){
             temp[i] = dynamicArray[i];
         }

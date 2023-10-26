@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int[] array = {5,4,3,2,1};
+//        int[] array = {5,4,3,2,1};
+        int[] array = {10, 7, 8, 9, 1, 5};
         System.out.println(Arrays.toString(array));
         quickSort(array,0, array.length-1);
         System.out.println(Arrays.toString(array));
@@ -24,7 +25,7 @@ public class QuickSort {
             while (array[end] > pivot){
                 end--;
             }
-            while (start<=end){
+            if(start<=end){
                 int temp = array[start];
                 array[start] = array[end];
                 array[end] = temp;

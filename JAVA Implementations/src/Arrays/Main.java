@@ -14,6 +14,7 @@ public class Main {
         array.add(5);
         array.add(5);
         System.out.println(array.isFull());
+        System.out.println(array.size());
         array.add(5);
         System.out.println(array.size());
         System.out.println(array.remove());
