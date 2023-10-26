@@ -14,5 +14,22 @@ public class QueueMain {
         System.out.println(queue.remove());
         queue.display();
 
+        Queue queue1 = new Queue(5);
+        queue1.enqueue(1);
+        queue1.enqueue(2);
+        queue1.enqueue(3);
+        queue1.enqueue(4);
+        queue1.enqueue(5);
+        System.out.println("Current Queue Size:" + queue1.size());
+        System.out.println(queue1.dequeue());
+        System.out.println(queue1.dequeue());
+        System.out.println(queue1.dequeue());
+        System.out.println(queue1.dequeue());
+        System.out.println(queue1.dequeue());
+        System.out.println("Current Queue Size:"+ queue1.size());
+        //here observe that the queue is empty but i can't insert a item
+        //So,to optimize it we use circular queue.
+        queue1.enqueue(6);
+
     }
 }

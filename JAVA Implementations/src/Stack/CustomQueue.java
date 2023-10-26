@@ -1,5 +1,7 @@
 package Stack;
 
+
+// Queue implementation using single pointer
 public class CustomQueue {
     protected int[] queue;
     private static final int DEFAULT_SIZE = 10;
