@@ -30,6 +30,23 @@ public class QueueMain {
         //here observe that the queue is empty but i can't insert a item
         //So,to optimize it we use circular queue.
         queue1.enqueue(6);
+        CircularQueue circularQueue= new CircularQueue(5);
+        DynamicCircularQueue dynamicCircularQueue = new DynamicCircularQueue(5);
+        circularQueue.insert(3);
+        circularQueue.insert(6);
+        circularQueue.insert(5);
+        circularQueue.insert(19);
+        circularQueue.insert(1);
+
+        circularQueue.display();
+        circularQueue.insert(55);
+        System.out.println(circularQueue.remove());
+        circularQueue.insert(133);
+        circularQueue.display();
+
+        System.out.println(queue.remove());
+        circularQueue.insert(99);
+        circularQueue.display();
 
     }
 }
