@@ -1,4 +1,4 @@
-package Stack;
+package Queue;
 
 
 // Queue implementation using single pointer

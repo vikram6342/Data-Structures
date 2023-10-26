@@ -1,4 +1,4 @@
-package Stack;
+package Queue;
 
 public class CircularQueue {
     int[] circularQueue;

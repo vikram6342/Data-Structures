@@ -1,6 +1,6 @@
-package Stack;
+package Queue;
 
-public class DynamicCircularQueue extends CircularQueue{
+public class DynamicCircularQueue extends CircularQueue {
     public DynamicCircularQueue(){
         super();
     }
