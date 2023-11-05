@@ -60,9 +60,15 @@ class BinarySearchTree:
                 return current_node.right
             elif current_node.right is None:
                 return current_node.left
-            current_node.value = self._find_min_recursive(current_node.right)
+            current_node.value = self.find_min_r(current_node.right)
             current_node.right = self._delete_recursive(current_node.right, current_node.value)
         return current_node
+
+    def find_min_r(self,root):
+        current = root
+        while current.left:
+            current = current.left
+        return current.value
     
     def display(self):
         self.display_helper(self.root, 0)
